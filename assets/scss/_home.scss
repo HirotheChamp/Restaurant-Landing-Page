@@ -162,7 +162,7 @@ img {
             line-height: 1.5;
             color: #525e66;
             font-size: 1.2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
         .about_link {
             font-size: 1.8rem;
@@ -205,6 +205,10 @@ img {
    justify-content: center;
    flex-direction: column;
    align-items: center;
+   h2{
+    text-align: center;
+    margin-bottom: 3rem;
+   }
 
    .button_rounded {
     background: #ed4852;
@@ -212,22 +216,58 @@ img {
     display: inline-block;
     padding: 20px;
     border-radius: 30px;
-    margin-bottom: 200px;
+    margin-bottom: 130px;
    
    }
-
+.container {
+    width: 100%;
+max-width: 1400px;
+position: relative;
+.left_button, .right_button {
+    background: red;
+    color: white;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: calc(50% - 25px);
+    display: inline-block;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.left_button {
+    left: -35px;
+}
+.right_button {
+    right: -35px;
+}
+}
    .food_slider {
 width: 100%;
-max-width: 1400px;
-display: flex;
+// max-width: 1400px;
+// display: flex;
+// margin-bottom: 2rem;
+font-size: 0;
+overflow: hidden;
+position: relative;
+
+.sliding_system {
+    white-space: nowrap;
+    transform: translate3d(-0%, 0, 0);
+}
     .slide {
         width: 20%;
         position: relative;
         height: 500px;
+        cursor: pointer;
+        display: inline-block;
+        white-space: normal;
       &:hover {
         .background{
             background: #ed4852;
-            transform: translate3d(0, -100px, 0);
+            transform: translate3d(0, -230px, 0);
         }
         .content {
             .food_title {
@@ -289,5 +329,5 @@ display: flex;
 h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    padding-bottom: 15px;
+    padding-bottom: 3rem;
 }
