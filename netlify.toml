@@ -1,4 +1,6 @@
-# global context
 [build]
   publish = "public"
   command = "gulp build"
+
+  [context.production.environment]
+  NODE_ENV = "production"
